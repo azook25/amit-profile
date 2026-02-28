@@ -100,23 +100,47 @@ function Stat({ number, label }: any) {
 function BioSection() {
   return (
     <div className="grid lg:grid-cols-3 gap-12">
+
+      {/* LEFT SIDE */}
       <div className="lg:col-span-2">
         <h2 className="text-2xl sm:text-3xl font-bold mb-6">Biography</h2>
+
         <p className="text-gray-700 leading-relaxed">
-          Amit Zuker is a 6'4 guard from Tel Aviv, Israel.
-          Currently playing for Ironi Kiryat Ono.
+          Amit Zuker is a 6'4 (1.93m) point guard / shooting guard from Tel Aviv, Israel.
+          Currently playing for Ironi Kiryat Ono "Shiko", Amit has built a winning youth career
+          including multiple national championships and cup titles.
         </p>
+
+        <h3 className="text-xl sm:text-2xl font-semibold mt-10 mb-4">
+          Awards & Honors
+        </h3>
+
+        <ul className="list-disc pl-6 space-y-2 text-gray-700">
+          <li>21/22 U16 Cup Holders</li>
+          <li>21/22 U16 National Championship</li>
+          <li>22/23 U18 National Cup Holders</li>
+          <li>22/23 U18 National Championship</li>
+          <li>22/23 National High Schools Championship</li>
+          <li>22/23 Tel Aviv "Outstanding Youth Athlete"</li>
+          <li>23/24 U18 National Championship</li>
+          <li>23/24 National High Schools Championship</li>
+        </ul>
       </div>
 
+      {/* RIGHT SIDE */}
       <div className="bg-gray-100 p-6 border">
         <h3 className="text-xl font-semibold mb-4">Quick Facts</h3>
         <div className="space-y-2 text-gray-700">
           <p><strong>Born:</strong> January 6, 2006</p>
-          <p><strong>Hometown:</strong> Tel Aviv</p>
+          <p><strong>Hometown:</strong> Tel Aviv, Israel</p>
           <p><strong>High School:</strong> Hadash Tel Aviv</p>
+          <p><strong>Team:</strong> Ironi Kiryat Ono "Shiko"</p>
           <p><strong>Position:</strong> PG / SG</p>
+          <p><strong>Height:</strong> 6'4" (1.93m)</p>
+          <p><strong>Weight:</strong> 87kg / 192lbs</p>
         </div>
       </div>
+
     </div>
   );
 }
