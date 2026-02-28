@@ -254,7 +254,7 @@ function Highlights() {
 function FullGames() {
   return (
     <div className="space-y-8">
-      <Video title="25/26 Israel National League Round 2" id="QpBbFDnvLDg" />
+      <Video title="25/26 Israel National League Round 2" id="QpBbFDnvlDg" />
     </div>
   );
 }
