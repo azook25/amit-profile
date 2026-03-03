@@ -253,9 +253,12 @@ function Highlights() {
 
 function FullGames() {
   return (
-    <div className="space-y-8">
+    <><div className="space-y-8">
       <Video title="25/26 Israel National League Round 2" id="QpBbFDnvlDg" />
     </div>
+    <div className="space-y-8">
+        <Video title="25/26 Israel National League Round 4" id="XHaEBzXH85M" />
+      </div></>
   );
 }
 
