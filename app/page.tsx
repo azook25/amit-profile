@@ -150,8 +150,8 @@ function NBAStats() {
   const [view, setView] = useState("Per Game");
 
   const perGame = {
-    GP: 18,
-    MIN: 28.4,
+    GP: 4,
+    MIN: 21.4,
     PTS: 11.8,
     REB: 5.0,
     AST: 3.9,
@@ -161,7 +161,7 @@ function NBAStats() {
   };
 
   const totals = {
-    GP: 18,
+    GP: 4,
     MIN: 511,
     PTS: 212,
     REB: 90,
@@ -255,7 +255,7 @@ function FullGames() {
   return (
     <div className="space-y-8">
       <Video title="25/26 Israel National League Round 2" id="QpBbFDnvlDg" />
-      <Video title="25/26 Israel National League Round 2" id="XHaEBzXH85M" />
+      <Video title="25/26 Israel National League Round 4" id="hqL6CIgLFU0" />
     </div>
     
   );
