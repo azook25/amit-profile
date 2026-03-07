@@ -256,6 +256,7 @@ function FullGames() {
     <div className="space-y-8">
       <Video title="25/26 Israel National League Round 2" id="QpBbFDnvlDg" />
       <Video title="25/26 Israel National League Round 4" id="hqL6CIgLFU0" />
+      <Video title="25/26 Israel National League Cup Round of 32" id="qFllnaeCF68" />
     </div>
     
   );
