@@ -148,45 +148,46 @@ function BioSection() {
 function NBAStats() {
   const [view, setView] = useState("Per Game");
 
-  // Averages/Totals updated with Volume Stats
+  // Accurate Data based on the provided "25/26 Stats" sheet
   const perGame = {
-    GP: 4, MIN: 23.3, PTS: 11.8, REB: 5.3, AST: 3.8, 
-    FG: "4.8-8.8", FG_PCT: 54.3, 
-    THREE: "1.3-3.0", THREE_PCT: 41.6, 
-    TWO: "3.5-5.8", TWO_PCT: 60.9,
-    FT: 82.1, TO: 2.3, PF: 2.8
+    GP: 4, MIN: "23:24", PTS: 11.75, REB: 5.25, AST: 3.75, STL: 1.75, BLK: 0, TO: 1.0, PF: 2.5,
+    FGM_A: "4.8-8.8", FG_PCT: 54.3,
+    FG3M_A: "1.3-3.0", FG3_PCT: 41.7,
+    FG2M_A: "3.5-5.8", FG2_PCT: 60.9,
+    FTM_A: "1.0-1.5", FT_PCT: 66.7,
+    PM: "+1.75"
   };
 
   const totals = {
-    GP: 4, MIN: 93, PTS: 47, REB: 21, AST: 15, 
-    FG: "19-35", FG_PCT: 54.3, 
-    THREE: "5-12", THREE_PCT: 41.6, 
-    TWO: "14-23", TWO_PCT: 60.9,
-    FT: 82.1, TO: 9, PF: 11
+    GP: 4, MIN: "93:21", PTS: 47, REB: 21, AST: 15, STL: 7, BLK: 0, TO: 4, PF: 10,
+    FGM_A: "19-35", FG_PCT: 54.3,
+    FG3M_A: "5-12", FG3_PCT: 41.7,
+    FG2M_A: "14-23", FG2_PCT: 60.9,
+    FTM_A: "4-6", FT_PCT: 66.7,
+    PM: "+7"
   };
 
   const data = view === "Per Game" ? perGame : totals;
 
   const gameLog = [
-    { date: "30/11/25", matchup: "vs Nof Hagalil", min: "27:53", pts: 8, fg: "4-10", fgp: "40.0", threepm: "0-3", threep: "0.0", twopm: "4-7", twop: "57.1", reb: 4, ast: 5, stl: 2, to: 4, pf: 2, pm: "-2" },
-    { date: "18/11/25", matchup: "vs Modiin (Cup)", min: "24:30", pts: 13, fg: "4-6", fgp: "66.6", threepm: "1-2", threep: "50.0", twopm: "3-4", twop: "75.0", reb: 3, ast: 4, stl: 2, to: 1, pf: 3, pm: "+1" },
-    { date: "11/11/25", matchup: "vs Motzkin", min: "20:16", pts: 15, fg: "5-8", fgp: "62.5", threepm: "2-3", threep: "66.6", twopm: "3-5", twop: "60.0", reb: 6, ast: 3, stl: 2, to: 2, pf: 2, pm: "+6" },
-    { date: "04/11/25", matchup: "@ Kfar Saba", min: "20:54", pts: 11, fg: "6-11", fgp: "54.5", threepm: "2-4", threep: "50.0", twopm: "4-7", twop: "57.1", reb: 8, ast: 3, stl: 1, to: 2, pf: 4, pm: "+2" },
+    { date: "30/11/25", opp: "vs Nof Hagalil", min: "27:53", pts: 8, fg: "4-10", fgp: "40.0", fg3: "0-4", fg3p: "0.0", fg2: "4-6", fg2p: "66.7", ft: "0-0", ftp: "0.0", reb: 4, ast: 5, stl: 2, to: 2, pf: 4, pm: "-2" },
+    { date: "18/11/25", opp: "vs Modiin (Cup)", min: "24:30", pts: 13, fg: "6-9", fgp: "66.7", fg3: "1-2", fg3p: "50.0", fg2: "5-7", fg2p: "71.4", ft: "0-1", ftp: "0.0", reb: 3, ast: 4, stl: 2, to: 0, pf: 2, pm: "+1" },
+    { date: "11/11/25", opp: "vs Motzkin", min: "20:16", pts: 15, fg: "5-8", fgp: "62.5", fg3: "2-3", fg3p: "66.7", fg2: "3-5", fg2p: "60.0", ft: "3-3", ftp: "100.0", reb: 6, ast: 3, stl: 2, to: 1, pf: 1, pm: "+6" },
+    { date: "04/11/25", opp: "@ Kfar Saba", min: "20:54", pts: 11, fg: "4-8", fgp: "50.0", fg3: "2-3", fg3p: "66.7", fg2: "2-5", fg2p: "40.0", ft: "1-2", ftp: "50.0", reb: 8, ast: 3, stl: 1, to: 1, pf: 3, pm: "+2" },
   ];
 
   return (
     <div className="space-y-12 text-black">
-
       {/* SEASON SUMMARY */}
       <div className="space-y-6">
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-          <h2 className="text-2xl sm:text-3xl font-extrabold uppercase border-l-4 border-blue-600 pl-3">
-            2025-26 Season Summary
+        <div className="flex justify-between items-center">
+          <h2 className="text-2xl font-extrabold uppercase border-l-4 border-blue-600 pl-3">
+            2025-26 Regular Season
           </h2>
           <div className="flex gap-4">
-             {["Per Game", "Totals"].map(option => (
+            {["Per Game", "Totals"].map(option => (
               <button key={option} onClick={() => setView(option)}
-                className={`text-xs font-bold uppercase pb-1 ${view === option ? "border-b-2 border-blue-600 text-blue-600" : "text-gray-400"}`}>
+                className={`text-xs font-bold uppercase pb-1 transition ${view === option ? "border-b-2 border-black text-black" : "text-gray-400 hover:text-black"}`}>
                 {option}
               </button>
             ))}
@@ -194,71 +195,95 @@ function NBAStats() {
         </div>
 
         <div className="overflow-x-auto border rounded-sm">
-          <table className="w-full text-xs sm:text-sm text-center">
-            <thead className="bg-gray-100 uppercase text-gray-600 font-bold">
+          <table className="w-full text-xs text-center border-collapse">
+            <thead className="bg-gray-100 uppercase text-gray-600 font-bold border-b">
               <tr>
-                <th className="p-3 border-b">GP</th>
-                <th className="p-3 border-b">PTS</th>
-                <th className="p-3 border-b">FG (M-A)</th>
-                <th className="p-3 border-b">3P (M-A)</th>
-                <th className="p-3 border-b">2P (M-A)</th>
-                <th className="p-3 border-b">REB</th>
-                <th className="p-3 border-b">AST</th>
-                <th className="p-3 border-b">TO</th>
-                <th className="p-3 border-b">PF</th>
+                <th className="p-3">GP</th>
+                <th className="p-3">MIN</th>
+                <th className="p-3">PTS</th>
+                <th className="p-3">FGM-A</th>
+                <th className="p-3">FG%</th>
+                <th className="p-3">3PM-A</th>
+                <th className="p-3">3P%</th>
+                <th className="p-3">FTM-A</th>
+                <th className="p-3">FT%</th>
+                <th className="p-3">REB</th>
+                <th className="p-3">AST</th>
+                <th className="p-3">STL</th>
+                <th className="p-3">TO</th>
+                <th className="p-3">PF</th>
               </tr>
             </thead>
-            <tbody>
-              <tr className="bg-white font-medium">
-                <td className="p-4">{data.GP}</td>
-                <td className="p-4 font-bold text-blue-600 text-lg">{data.PTS}</td>
-                <td className="p-4">{data.FG} <span className="text-gray-400 text-[10px]">({data.FG_PCT}%)</span></td>
-                <td className="p-4">{data.THREE} <span className="text-gray-400 text-[10px]">({data.THREE_PCT}%)</span></td>
-                <td className="p-4">{data.TWO} <span className="text-gray-400 text-[10px]">({data.TWO_PCT}%)</span></td>
-                <td className="p-4">{data.REB}</td>
-                <td className="p-4">{data.AST}</td>
-                <td className="p-4 text-red-600">{data.TO}</td>
-                <td className="p-4">{data.PF}</td>
+            <tbody className="bg-white">
+              <tr className="font-medium hover:bg-gray-50 transition">
+                <td className="p-4 border-b">{data.GP}</td>
+                <td className="p-4 border-b">{data.MIN}</td>
+                <td className="p-4 border-b font-bold text-blue-600">{data.PTS}</td>
+                <td className="p-4 border-b">{data.FGM_A}</td>
+                <td className="p-4 border-b">{data.FG_PCT}%</td>
+                <td className="p-4 border-b">{data.FG3M_A}</td>
+                <td className="p-4 border-b">{data.FG3_PCT}%</td>
+                <td className="p-4 border-b">{data.FTM_A}</td>
+                <td className="p-4 border-b">{data.FT_PCT}%</td>
+                <td className="p-4 border-b">{data.REB}</td>
+                <td className="p-4 border-b">{data.AST}</td>
+                <td className="p-4 border-b">{data.STL}</td>
+                <td className="p-4 border-b">{data.TO}</td>
+                <td className="p-4 border-b">{data.PF}</td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
 
-      {/* DETAILED GAME LOG */}
+      {/* GAME LOG */}
       <div className="space-y-6">
-        <h3 className="text-xl sm:text-2xl font-bold uppercase">Detailed Game Log</h3>
+        <h3 className="text-xl font-bold uppercase">Game Log</h3>
         <div className="overflow-x-auto border rounded-sm">
-          <table className="w-full text-[11px] sm:text-xs text-center whitespace-nowrap">
+          <table className="w-full text-[11px] text-center border-collapse whitespace-nowrap">
             <thead className="bg-gray-800 text-white uppercase font-bold">
               <tr>
                 <th className="p-3 text-left">Date</th>
-                <th className="p-3 text-left">Matchup</th>
+                <th className="p-3 text-left">Opponent</th>
+                <th className="p-3">MIN</th>
                 <th className="p-3">PTS</th>
-                <th className="p-3">FG</th>
-                <th className="p-3">3P</th>
-                <th className="p-3">2P</th>
+                <th className="p-3">FGM-A</th>
+                <th className="p-3">FG%</th>
+                <th className="p-3">3PM-A</th>
+                <th className="p-3">3P%</th>
+                <th className="p-3">2PM-A</th>
+                <th className="p-3">2P%</th>
+                <th className="p-3">FTM-A</th>
+                <th className="p-3">FT%</th>
                 <th className="p-3">REB</th>
                 <th className="p-3">AST</th>
-                <th className="p-3 text-red-400">TO</th>
+                <th className="p-3">STL</th>
+                <th className="p-3">TO</th>
                 <th className="p-3">PF</th>
                 <th className="p-3">+/-</th>
               </tr>
             </thead>
             <tbody>
               {gameLog.map((game, i) => (
-                <tr key={i} className="border-b hover:bg-gray-50 transition">
+                <tr key={i} className="border-b hover:bg-gray-50 transition last:border-0">
                   <td className="p-3 text-left font-bold">{game.date}</td>
-                  <td className="p-3 text-left text-gray-500">{game.matchup}</td>
+                  <td className="p-3 text-left text-gray-500 font-medium">{game.opp}</td>
+                  <td className="p-3 font-medium">{game.min}</td>
                   <td className="p-3 font-bold text-blue-600">{game.pts}</td>
-                  <td className="p-3">{game.fg} <span className="text-[9px] text-gray-400">({game.fgp}%)</span></td>
-                  <td className="p-3">{game.threepm} <span className="text-[9px] text-gray-400">({game.threep}%)</span></td>
-                  <td className="p-3">{game.twopm} <span className="text-[9px] text-gray-400">({game.twop}%)</span></td>
-                  <td className="p-3">{game.reb}</td>
-                  <td className="p-3">{game.ast}</td>
-                  <td className="p-3 font-semibold text-red-500">{game.to}</td>
-                  <td className="p-3">{game.pf}</td>
-                  <td className={`p-3 font-bold ${game.pm.startsWith('+') ? 'text-green-600' : 'text-red-500'}`}>{game.pm}</td>
+                  <td className="p-3">{game.fg}</td>
+                  <td className="p-3 font-semibold">{game.fgp}%</td>
+                  <td className="p-3">{game.fg3}</td>
+                  <td className="p-3 font-semibold">{game.fg3p}%</td>
+                  <td className="p-3">{game.fg2}</td>
+                  <td className="p-3 font-semibold">{game.fg2p}%</td>
+                  <td className="p-3">{game.ft}</td>
+                  <td className="p-3 font-semibold">{game.ftp}%</td>
+                  <td className="p-3 font-medium">{game.reb}</td>
+                  <td className="p-3 font-medium">{game.ast}</td>
+                  <td className="p-3 font-medium">{game.stl}</td>
+                  <td className="p-3 font-medium text-gray-600">{game.to}</td>
+                  <td className="p-3 font-medium text-gray-600">{game.pf}</td>
+                  <td className="p-3 font-bold">{game.pm}</td>
                 </tr>
               ))}
             </tbody>
