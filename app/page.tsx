@@ -148,32 +148,32 @@ function BioSection() {
 function NBAStats() {
   const [view, setView] = useState("Per Game");
 
-  // Accurate Data based on the provided "25/26 Stats" sheet
+  // Accurate Data verified from 25/26 Stats Spreadsheet
   const perGame = {
     GP: 4, MIN: "23:24", PTS: 11.75, REB: 5.25, AST: 3.75, STL: 1.75, BLK: 0, TO: 1.0, PF: 2.5,
-    FGM_A: "4.8-8.8", FG_PCT: 54.3,
-    FG3M_A: "1.3-3.0", FG3_PCT: 41.7,
-    FG2M_A: "3.5-5.8", FG2_PCT: 60.9,
-    FTM_A: "1.0-1.5", FT_PCT: 66.7,
+    FGM_A: "4.8/8.8", FG_PCT: 54.3,
+    FG3M_A: "1.3/3.0", FG3_PCT: 41.7,
+    FG2M_A: "3.5/5.8", FG2_PCT: 60.9,
+    FTM_A: "1.0/1.5", FT_PCT: 66.7,
     PM: "+1.75"
   };
 
   const totals = {
     GP: 4, MIN: "93:21", PTS: 47, REB: 21, AST: 15, STL: 7, BLK: 0, TO: 4, PF: 10,
-    FGM_A: "19-35", FG_PCT: 54.3,
-    FG3M_A: "5-12", FG3_PCT: 41.7,
-    FG2M_A: "14-23", FG2_PCT: 60.9,
-    FTM_A: "4-6", FT_PCT: 66.7,
+    FGM_A: "19/35", FG_PCT: 54.3,
+    FG3M_A: "5/12", FG3_PCT: 41.7,
+    FG2M_A: "14/23", FG2_PCT: 60.9,
+    FTM_A: "4/6", FT_PCT: 66.7,
     PM: "+7"
   };
 
   const data = view === "Per Game" ? perGame : totals;
 
   const gameLog = [
-    { date: "30/11/25", opp: "vs Nof Hagalil", min: "27:53", pts: 8, fg: "4-10", fgp: "40.0", fg3: "0-4", fg3p: "0.0", fg2: "4-6", fg2p: "66.7", ft: "0-0", ftp: "0.0", reb: 4, ast: 5, stl: 2, to: 2, pf: 4, pm: "-2" },
-    { date: "18/11/25", opp: "vs Modiin (Cup)", min: "24:30", pts: 13, fg: "6-9", fgp: "66.7", fg3: "1-2", fg3p: "50.0", fg2: "5-7", fg2p: "71.4", ft: "0-1", ftp: "0.0", reb: 3, ast: 4, stl: 2, to: 0, pf: 2, pm: "+1" },
-    { date: "11/11/25", opp: "vs Motzkin", min: "20:16", pts: 15, fg: "5-8", fgp: "62.5", fg3: "2-3", fg3p: "66.7", fg2: "3-5", fg2p: "60.0", ft: "3-3", ftp: "100.0", reb: 6, ast: 3, stl: 2, to: 1, pf: 1, pm: "+6" },
-    { date: "04/11/25", opp: "@ Kfar Saba", min: "20:54", pts: 11, fg: "4-8", fgp: "50.0", fg3: "2-3", fg3p: "66.7", fg2: "2-5", fg2p: "40.0", ft: "1-2", ftp: "50.0", reb: 8, ast: 3, stl: 1, to: 1, pf: 3, pm: "+2" },
+    { date: "30/11/25", opp: "vs Nof Hagalil", min: "27:53", pts: 8, fg: "4/10", fgp: "40.0", fg3: "0/4", fg3p: "0.0", fg2: "4/6", fg2p: "66.7", ft: "0/0", ftp: "0.0", reb: 4, ast: 5, stl: 2, to: 2, pf: 4, pm: "-2" },
+    { date: "18/11/25", opp: "vs Modiin (Cup)", min: "24:30", pts: 13, fg: "6/9", fgp: "66.7", fg3: "1/2", fg3p: "50.0", fg2: "5/7", fg2p: "71.4", ft: "0/1", ftp: "0.0", reb: 3, ast: 4, stl: 2, to: 0, pf: 2, pm: "+1" },
+    { date: "11/11/25", opp: "vs Motzkin", min: "20:16", pts: 15, fg: "5/8", fgp: "62.5", fg3: "2/3", fg3p: "66.7", fg2: "3/5", fg2p: "60.0", ft: "3/3", ftp: "100.0", reb: 6, ast: 3, stl: 2, to: 1, pf: 1, pm: "+6" },
+    { date: "04/11/25", opp: "@ Kfar Saba", min: "20:54", pts: 11, fg: "4/8", fgp: "50.0", fg3: "2/3", fg3p: "66.7", fg2: "2/5", fg2p: "40.0", ft: "1/2", ftp: "50.0", reb: 8, ast: 3, stl: 1, to: 1, pf: 3, pm: "+2" },
   ];
 
   return (
@@ -201,11 +201,11 @@ function NBAStats() {
                 <th className="p-3">GP</th>
                 <th className="p-3">MIN</th>
                 <th className="p-3">PTS</th>
-                <th className="p-3">FGM-A</th>
+                <th className="p-3">FGM/A</th>
                 <th className="p-3">FG%</th>
-                <th className="p-3">3PM-A</th>
+                <th className="p-3">3PM/A</th>
                 <th className="p-3">3P%</th>
-                <th className="p-3">FTM-A</th>
+                <th className="p-3">FTM/A</th>
                 <th className="p-3">FT%</th>
                 <th className="p-3">REB</th>
                 <th className="p-3">AST</th>
@@ -243,17 +243,17 @@ function NBAStats() {
           <table className="w-full text-[11px] text-center border-collapse whitespace-nowrap">
             <thead className="bg-gray-800 text-white uppercase font-bold">
               <tr>
-                <th className="p-3 text-left">Date</th>
-                <th className="p-3 text-left">Opponent</th>
+                <th className="p-3 text-left border-r border-gray-700">Date</th>
+                <th className="p-3 text-left border-r border-gray-700">Opponent</th>
                 <th className="p-3">MIN</th>
                 <th className="p-3">PTS</th>
-                <th className="p-3">FGM-A</th>
+                <th className="p-3">FGM/A</th>
                 <th className="p-3">FG%</th>
-                <th className="p-3">3PM-A</th>
+                <th className="p-3">3PM/A</th>
                 <th className="p-3">3P%</th>
-                <th className="p-3">2PM-A</th>
+                <th className="p-3">2PM/A</th>
                 <th className="p-3">2P%</th>
-                <th className="p-3">FTM-A</th>
+                <th className="p-3">FTM/A</th>
                 <th className="p-3">FT%</th>
                 <th className="p-3">REB</th>
                 <th className="p-3">AST</th>
