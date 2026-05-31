@@ -93,15 +93,16 @@ function BioSection() {
         <h2 className="text-2xl sm:text-3xl font-bold mb-6">Biography</h2>
 
         <p className="text-gray-700 leading-relaxed">
-        Amit Zuker is a 6'4" (1.93m) point guard/shooting guard from Tel Aviv, Israel.
+        Amit Zuker is a 6'4" (1.93m) Point Guard/Shooting Guard from Tel Aviv, Israel.
         <br />
         <br />
-        He is currently playing for Ironi Kiryat Ono “Shiko” in the Israeli National League
+        Currently playing for Ironi Kiryat Ono “Shiko” in the Israeli National League
         (development team of Maccabi Ramat Gan in the Israeli Premier League).
         <br />
         <br />
-        Amit grew up in and graduated from the prestigious academy of Maccabi Tel Aviv and,
-        during his high school years, won four national championships with his team, along
+        Grew up in and graduated from the prestigious academy of Maccabi Tel Aviv.
+        <br />
+        During his high school years, won four national championships with his team, along
         with multiple awards.
       </p>
 
