@@ -348,16 +348,20 @@ function FullGames() {
   return (
     <div className="space-y-12 max-w-4xl mx-auto">
       <Video
-        title="25/26 Israel National League | 20:16 MIN • 11 PTS • 8 REB • 3 AST"
+        title="25/26 Israel National League (vs Kfar Saba)| 20:16 MIN • 11 PTS • 8 REB • 3 AST"
         id="QpBbFDnvlDg"
       />
       <Video
-        title="25/26 Israel National League | 27:53 MIN • 8 PTS • 4 REB • 5 AST"
+        title="25/26 Israel National League (vs Nof Hagalil)| 27:53 MIN • 8 PTS • 4 REB • 5 AST"
         id="hqL6CIgLFU0"
       />
       <Video
-        title="25/26 Israel National League Cup | 24:30 MIN • 13 PTS • 3 REB • 4 AST"
+        title="25/26 Israel National League Cup (vs Modii'n) | 24:30 MIN • 13 PTS • 3 REB • 4 AST"
         id="qFllnaeCF68"
+      />
+      <Video
+        title="25/26 Israel National League (vs Motzkin) | 20:16 MIN • 15 PTS • 6 REB • 3 AST"
+        id="ff5KJwMuoKg"
       />
     </div>
   );
