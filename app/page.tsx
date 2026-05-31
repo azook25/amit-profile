@@ -68,7 +68,6 @@ export default function Home() {
           {activeTab === "Stats" && <NBAStats />}
           {activeTab === "Highlights" && <Highlights />}
           {activeTab === "Full Games" && <FullGames />}
-          {activeTab === "Photos" && <Photos />}
         </div>
       </section>
     </main>
@@ -95,8 +94,10 @@ function BioSection() {
 
         <p className="text-gray-700 leading-relaxed">
           Amit Zuker is a 6'4" (1.93m) point guard/shooting guard from Tel Aviv,
-          Israel. He is currently playing for Ironi Kiryat Ono “Shiko” in the
-          Israeli League. Amit grew up in the prestigious academy of Maccabi Tel
+          Israel. 
+          He is currently playing for Ironi Kiryat Ono “Shiko” in the
+          Israeli National League (development team of Maccabi Ramat Gan in the Israeli Premier League). 
+          Amit grew up in and graduated from the prestigious academy of Maccabi Tel
           Aviv and during his high school years, won four national championships
           with his team, along with multiple awards.
         </p>
@@ -106,12 +107,13 @@ function BioSection() {
         </h3>
 
         <ul className="list-disc pl-6 space-y-2 text-gray-700">
+          <li>20/21 U15 Cup Holders</li>
           <li>21/22 U16 Cup Holders</li>
           <li>21/22 U16 National Championship</li>
           <li>22/23 U18 National Cup Holders</li>
           <li>22/23 U18 National Championship</li>
           <li>22/23 National High Schools Championship</li>
-          <li>22/23 Tel Aviv "Outstanding Youth Athlete"</li>
+          <li>2023 City Of Tel Aviv "Outstanding Youth Athlete"</li>
           <li>23/24 U18 National Championship</li>
           <li>23/24 National High Schools Championship</li>
         </ul>
@@ -182,12 +184,12 @@ function NBAStats() {
   const data = view === "Per Game" ? perGame : totals;
 
   const gameLog = [
-    { date: "-", opp: "vs Nesher", min: "26:40", pts: 19, fg: "9/13", fgp: "69.2", fg3: "0/1", fg3p: "0.0", fg2: "9/12", fg2p: "75.0", ft: "1/2", ftp: "50.0", reb: 7, ast: 3, stl: 1, to: 1, pf: "-", pm: "-1" },
-    { date: "-", opp: "vs Hod HaSharon", min: "24:55", pts: 12, fg: "5/7", fgp: "71.4", fg3: "2/2", fg3p: "100.0", fg2: "3/5", fg2p: "60.0", ft: "0/0", ftp: "-", reb: 7, ast: 6, stl: 3, to: 1, pf: "-", pm: "+14" },
-    { date: "-", opp: "vs Megiddo", min: "22:23", pts: 7, fg: "1/7", fgp: "14.3", fg3: "0/4", fg3p: "0.0", fg2: "1/3", fg2p: "33.3", ft: "5/6", ftp: "83.3", reb: 7, ast: 5, stl: 1, to: 1, pf: "-", pm: "+11" },
-    { date: "-", opp: "vs Givat Shmuel", min: "26:55", pts: 13, fg: "3/8", fgp: "37.5", fg3: "2/4", fg3p: "50.0", fg2: "1/4", fg2p: "25.0", ft: "5/6", ftp: "83.3", reb: 6, ast: 7, stl: 2, to: 1, pf: "-", pm: "+4" },
-    { date: "-", opp: "vs Hadera", min: "18:22", pts: 8, fg: "3/8", fgp: "37.5", fg3: "1/3", fg3p: "33.3", fg2: "2/5", fg2p: "40.0", ft: "1/3", ftp: "33.3", reb: 7, ast: 5, stl: 2, to: 4, pf: "-", pm: "+16" },
-    { date: "-", opp: "vs Kiryat Bialik", min: "10:25", pts: 1, fg: "0/9", fgp: "0.0", fg3: "0/4", fg3p: "0.0", fg2: "0/5", fg2p: "0.0", ft: "1/2", ftp: "50.0", reb: 4, ast: 3, stl: 1, to: 1, pf: "-", pm: "+5" },
+    { date: "24/05/26", opp: "vs Nesher", min: "26:40", pts: 19, fg: "9/13", fgp: "69.2", fg3: "0/1", fg3p: "0.0", fg2: "9/12", fg2p: "75.0", ft: "1/2", ftp: "50.0", reb: 7, ast: 3, stl: 1, to: 1, pf: "-", pm: "-1" },
+    { date: "17/05/26", opp: "vs Hod HaSharon", min: "24:55", pts: 12, fg: "5/7", fgp: "71.4", fg3: "2/2", fg3p: "100.0", fg2: "3/5", fg2p: "60.0", ft: "0/0", ftp: "-", reb: 7, ast: 6, stl: 3, to: 1, pf: "-", pm: "+14" },
+    { date: "10/05/26", opp: "vs Megiddo", min: "22:23", pts: 7, fg: "1/7", fgp: "14.3", fg3: "0/4", fg3p: "0.0", fg2: "1/3", fg2p: "33.3", ft: "5/6", ftp: "83.3", reb: 7, ast: 5, stl: 1, to: 1, pf: "-", pm: "+11" },
+    { date: "05/05/26", opp: "vs Givat Shmuel", min: "26:55", pts: 13, fg: "3/8", fgp: "37.5", fg3: "2/4", fg3p: "50.0", fg2: "1/4", fg2p: "25.0", ft: "5/6", ftp: "83.3", reb: 6, ast: 7, stl: 2, to: 1, pf: "-", pm: "+4" },
+    { date: "26/04/26", opp: "vs Hadera", min: "18:22", pts: 8, fg: "3/8", fgp: "37.5", fg3: "1/3", fg3p: "33.3", fg2: "2/5", fg2p: "40.0", ft: "1/3", ftp: "33.3", reb: 7, ast: 5, stl: 2, to: 4, pf: "-", pm: "+16" },
+    { date: "19/04/26", opp: "vs Kiryat Bialik", min: "10:25", pts: 1, fg: "0/9", fgp: "0.0", fg3: "0/4", fg3p: "0.0", fg2: "0/5", fg2p: "0.0", ft: "1/2", ftp: "50.0", reb: 4, ast: 3, stl: 1, to: 1, pf: "-", pm: "+5" },
     { date: "30/11/25", opp: "vs Nof Hagalil", min: "27:53", pts: 8, fg: "4/10", fgp: "40.0", fg3: "0/4", fg3p: "0.0", fg2: "4/6", fg2p: "66.7", ft: "0/0", ftp: "-", reb: 4, ast: 5, stl: 2, to: 2, pf: 4, pm: "-2" },
     { date: "18/11/25", opp: "vs Modiin (Cup)", min: "24:30", pts: 13, fg: "6/9", fgp: "66.7", fg3: "1/2", fg3p: "50.0", fg2: "5/7", fg2p: "71.4", ft: "0/1", ftp: "0.0", reb: 3, ast: 4, stl: 2, to: 0, pf: 2, pm: "+1" },
     { date: "11/11/25", opp: "vs Motzkin", min: "20:16", pts: 15, fg: "5/8", fgp: "62.5", fg3: "2/3", fg3p: "66.7", fg2: "3/5", fg2p: "60.0", ft: "3/3", ftp: "100.0", reb: 6, ast: 3, stl: 2, to: 1, pf: 1, pm: "+6" },
@@ -346,15 +348,15 @@ function FullGames() {
   return (
     <div className="space-y-12 max-w-4xl mx-auto">
       <Video
-        title="25/26 Israel National League Round 2 | 20:16 MIN • 11 PTS • 8 REB • 3 AST"
+        title="25/26 Israel National League | 20:16 MIN • 11 PTS • 8 REB • 3 AST"
         id="QpBbFDnvlDg"
       />
       <Video
-        title="25/26 Israel National League Round 4 | 27:53 MIN • 8 PTS • 4 REB • 5 AST"
+        title="25/26 Israel National League | 27:53 MIN • 8 PTS • 4 REB • 5 AST"
         id="hqL6CIgLFU0"
       />
       <Video
-        title="25/26 Israel National League Cup Round of 32 | 24:30 MIN • 13 PTS • 3 REB • 4 AST"
+        title="25/26 Israel National League Cup | 24:30 MIN • 13 PTS • 3 REB • 4 AST"
         id="qFllnaeCF68"
       />
     </div>
@@ -378,37 +380,6 @@ function Video({ title, id }: { title: string; id: string }) {
           allowFullScreen
         />
       </div>
-    </div>
-  );
-}
-
-/* PHOTOS */
-function Photos() {
-  const images = [
-    "one.jpg",
-    "two.JPG",
-    "three.JPG",
-    "four.jpg",
-    "five.JPG",
-    "six.jpg",
-    "seven.jpg",
-    "eight.jpg",
-    "nine.jpg",
-    "ten.jpg",
-    "eleven.jpg",
-    "twelve.jpg",
-  ];
-
-  return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-      {images.map((img, i) => (
-        <img
-          key={i}
-          src={`/${img}`}
-          alt={`Gallery image ${i + 1}`}
-          className="w-full h-40 sm:h-56 object-cover rounded-lg shadow hover:scale-105 transition duration-300"
-        />
-      ))}
     </div>
   );
 }
