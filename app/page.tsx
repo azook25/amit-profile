@@ -112,7 +112,7 @@ function BioSection() {
         </h3>
 
         <ul className="list-disc pl-6 space-y-2 text-gray-700">
-          <li>20/21 U15 Cup Holders</li>
+          <li>20/21 U15 National Championship</li>
           <li>21/22 U16 Cup Holders</li>
           <li>21/22 U16 National Championship</li>
           <li>22/23 U18 National Cup Holders</li>
