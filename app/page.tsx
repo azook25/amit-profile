@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const tabs = ["Bio", "Stats", "Highlights", "Full Games", "Photos"];
+const tabs = ["Bio", "Stats", "Highlights", "Full Games"];
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("Bio");
