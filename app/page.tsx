@@ -125,15 +125,19 @@ function BioSection() {
       </div>
 
       <div className="bg-gray-100 p-6 border">
-        <h3 className="text-xl font-semibold mb-4">Quick Facts</h3>
+        <h3 className="text-xl font-semibold mb-4">Quick Facts & Academics</h3>
         <div className="space-y-2 text-gray-700 text-sm sm:text-base">
           <p><strong>Born:</strong> January 6, 2006</p>
           <p><strong>Hometown:</strong> Tel Aviv, Israel</p>
           <p><strong>High School:</strong> Hadash Tel Aviv</p>
+          <p><strong>High School Major:</strong> Hadash Tel Aviv</p>
+          <p><strong>SAT Score:</strong> 1350</p>
+          
           <p><strong>Team:</strong> Ironi Kiryat Ono "Shiko"</p>
           <p><strong>Position:</strong> PG / SG</p>
           <p><strong>Height:</strong> 6'4" (1.93m)</p>
-          <p><strong>Weight:</strong> 87kg / 192lbs</p>
+          <p><strong>Weight:</strong> 192lbs / 87kg</p>
+
         </div>
       </div>
     </div>
