@@ -130,7 +130,7 @@ function BioSection() {
           <p><strong>Born:</strong> January 6, 2006</p>
           <p><strong>Hometown:</strong> Tel Aviv, Israel</p>
           <p><strong>High School:</strong> Hadash Tel Aviv</p>
-          <p><strong>High School Major:</strong> Hadash Tel Aviv</p>
+          <p><strong>HS Major:</strong> Computer Science</p>
           <p><strong>SAT Score:</strong> 1350</p>
           
           <p><strong>Team:</strong> Ironi Kiryat Ono "Shiko"</p>
