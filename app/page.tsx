@@ -27,7 +27,7 @@ export default function Home() {
 
             <div className="mt-10 flex justify-center lg:justify-start gap-8 sm:gap-16">
               <Stat number="10.7" label="PPG" />
-              <Stat number="5.9" label="RPG" />
+              <Stat number="6.2" label="RPG" />
               <Stat number="4.4" label="APG" />
             </div>
           </div>
@@ -148,59 +148,63 @@ function BioSection() {
 function NBAStats() {
   const [view, setView] = useState("Per Game");
 
+  // Recalculated based on 11 total games played
   const perGame = {
-    GP: 10,
-    MIN: "22:18",
+    GP: 11,
+    MIN: "22:01",
     PTS: 10.7,
-    REB: 5.9,
-    AST: 4.4,
-    STL: 1.7,
+    REB: 6.2,
+    AST: 4.3,
+    STL: 1.6,
     BLK: 0,
     TO: 1.3,
-    PF: "-",
-    FGM_A: "4.0/8.7",
-    FG_PCT: 46.0,
+    PF: "1.6", // Included fouls per game now that data is available
+    FGM_A: "4.1/9.1",
+    FG_PCT: 46.4,
     FG3M_A: "1.0/3.0",
     FG3_PCT: 33.3,
-    FG2M_A: "3.0/5.7",
-    FG2_PCT: 52.6,
-    FTM_A: "1.7/2.5",
+    FG2M_A: "3.1/6.1",
+    FG2_PCT: 50.7,
+    FTM_A: "1.5/2.3",
     FT_PCT: 68.0,
-    PM: "+5.6",
+    PM: "+4.5",
   };
 
+  // Recalculated total sums including the new game
   const totals = {
-    GP: 10,
-    MIN: "223:01",
-    PTS: 107,
-    REB: 59,
-    AST: 44,
-    STL: 17,
+    GP: 11,
+    MIN: "242:11",
+    PTS: 118,
+    REB: 68,
+    AST: 47,
+    STL: 18,
     BLK: 0,
-    TO: 13,
-    PF: "-",
-    FGM_A: "40/87",
-    FG_PCT: 46.0,
-    FG3M_A: "10/30",
+    TO: 14,
+    PF: 18, 
+    FGM_A: "45/97",
+    FG_PCT: 46.4,
+    FG3M_A: "11/33",
     FG3_PCT: 33.3,
-    FG2M_A: "30/57",
-    FG2_PCT: 52.6,
+    FG2M_A: "34/67",
+    FG2_PCT: 50.7,
     FTM_A: "17/25",
     FT_PCT: 68.0,
-    PM: "+56",
+    PM: "+49",
   };
 
   const data = view === "Per Game" ? perGame : totals;
 
   const gameLog = [
-    { date: "24/05/26", opp: "vs Nesher", min: "26:40", pts: 19, fg: "9/13", fgp: "69.2", fg3: "0/1", fg3p: "0.0", fg2: "9/12", fg2p: "75.0", ft: "1/2", ftp: "50.0", reb: 7, ast: 3, stl: 1, to: 1, pf: "-", pm: "-1" },
-    { date: "17/05/26", opp: "vs Hod HaSharon", min: "24:55", pts: 12, fg: "5/7", fgp: "71.4", fg3: "2/2", fg3p: "100.0", fg2: "3/5", fg2p: "60.0", ft: "0/0", ftp: "-", reb: 7, ast: 6, stl: 3, to: 1, pf: "-", pm: "+14" },
+    // NEW GAME ADDED AT THE TOP (CHRONOLOGICAL ORDER)
+    { date: "31/05/26", opp: "@ Kfar Saba", min: "19:10", pts: 11, fg: "5/10", fgp: "50.0", fg3: "1/3", fg3p: "33.3", fg2: "4/7", fg2p: "57.1", ft: "0/0", ftp: "-", reb: 9, ast: 3, stl: 1, to: 1, pf: 5, pm: "-7" },
+    { date: "24/05/26", opp: "@ Nesher", min: "26:40", pts: 19, fg: "9/13", fgp: "69.2", fg3: "0/1", fg3p: "0.0", fg2: "9/12", fg2p: "75.0", ft: "1/2", ftp: "50.0", reb: 7, ast: 3, stl: 1, to: 1, pf: "-", pm: "-1" },
+    { date: "17/05/26", opp: "@ Hod HaSharon", min: "24:55", pts: 12, fg: "5/7", fgp: "71.4", fg3: "2/2", fg3p: "100.0", fg2: "3/5", fg2p: "60.0", ft: "0/0", ftp: "-", reb: 7, ast: 6, stl: 3, to: 1, pf: "-", pm: "+14" },
     { date: "10/05/26", opp: "vs Megiddo", min: "22:23", pts: 7, fg: "1/7", fgp: "14.3", fg3: "0/4", fg3p: "0.0", fg2: "1/3", fg2p: "33.3", ft: "5/6", ftp: "83.3", reb: 7, ast: 5, stl: 1, to: 1, pf: "-", pm: "+11" },
-    { date: "05/05/26", opp: "vs Givat Shmuel", min: "26:55", pts: 13, fg: "3/8", fgp: "37.5", fg3: "2/4", fg3p: "50.0", fg2: "1/4", fg2p: "25.0", ft: "5/6", ftp: "83.3", reb: 6, ast: 7, stl: 2, to: 1, pf: "-", pm: "+4" },
+    { date: "05/05/26", opp: "@ Givat Shmuel", min: "26:55", pts: 13, fg: "3/8", fgp: "37.5", fg3: "2/4", fg3p: "50.0", fg2: "1/4", fg2p: "25.0", ft: "5/6", ftp: "83.3", reb: 6, ast: 7, stl: 2, to: 1, pf: "-", pm: "+4" },
     { date: "26/04/26", opp: "vs Hadera", min: "18:22", pts: 8, fg: "3/8", fgp: "37.5", fg3: "1/3", fg3p: "33.3", fg2: "2/5", fg2p: "40.0", ft: "1/3", ftp: "33.3", reb: 7, ast: 5, stl: 2, to: 4, pf: "-", pm: "+16" },
-    { date: "19/04/26", opp: "vs Kiryat Bialik", min: "10:25", pts: 1, fg: "0/9", fgp: "0.0", fg3: "0/4", fg3p: "0.0", fg2: "0/5", fg2p: "0.0", ft: "1/2", ftp: "50.0", reb: 4, ast: 3, stl: 1, to: 1, pf: "-", pm: "+5" },
+    { date: "19/04/26", opp: "@ Kiryat Bialik", min: "10:25", pts: 1, fg: "0/9", fgp: "0.0", fg3: "0/4", fg3p: "0.0", fg2: "0/5", fg2p: "0.0", ft: "1/2", ftp: "50.0", reb: 4, ast: 3, stl: 1, to: 1, pf: "-", pm: "+5" },
     { date: "30/11/25", opp: "vs Nof Hagalil", min: "27:53", pts: 8, fg: "4/10", fgp: "40.0", fg3: "0/4", fg3p: "0.0", fg2: "4/6", fg2p: "66.7", ft: "0/0", ftp: "-", reb: 4, ast: 5, stl: 2, to: 2, pf: 4, pm: "-2" },
-    { date: "18/11/25", opp: "vs Modiin (Cup)", min: "24:30", pts: 13, fg: "6/9", fgp: "66.7", fg3: "1/2", fg3p: "50.0", fg2: "5/7", fg2p: "71.4", ft: "0/1", ftp: "0.0", reb: 3, ast: 4, stl: 2, to: 0, pf: 2, pm: "+1" },
+    { date: "18/11/25", opp: "vs Modiin", min: "24:30", pts: 13, fg: "6/9", fgp: "66.7", fg3: "1/2", fg3p: "50.0", fg2: "5/7", fg2p: "71.4", ft: "0/1", ftp: "0.0", reb: 3, ast: 4, stl: 2, to: 0, pf: 2, pm: "+1" },
     { date: "11/11/25", opp: "vs Motzkin", min: "20:16", pts: 15, fg: "5/8", fgp: "62.5", fg3: "2/3", fg3p: "66.7", fg2: "3/5", fg2p: "60.0", ft: "3/3", ftp: "100.0", reb: 6, ast: 3, stl: 2, to: 1, pf: 1, pm: "+6" },
     { date: "04/11/25", opp: "@ Kfar Saba", min: "20:54", pts: 11, fg: "4/8", fgp: "50.0", fg3: "2/3", fg3p: "66.7", fg2: "2/5", fg2p: "40.0", ft: "1/2", ftp: "50.0", reb: 8, ast: 3, stl: 1, to: 1, pf: 3, pm: "+2" },
   ];
@@ -249,6 +253,7 @@ function NBAStats() {
                 <th className="p-3">AST</th>
                 <th className="p-3">STL</th>
                 <th className="p-3">TO</th>
+                <th className="p-3">PF</th>
                 <th className="p-3">+/-</th>
               </tr>
             </thead>
@@ -270,6 +275,7 @@ function NBAStats() {
                 <td className="p-4 border-b">{data.AST}</td>
                 <td className="p-4 border-b">{data.STL}</td>
                 <td className="p-4 border-b">{data.TO}</td>
+                <td className="p-4 border-b">{data.PF}</td>
                 <td className="p-4 border-b font-bold">{data.PM}</td>
               </tr>
             </tbody>
@@ -338,7 +344,6 @@ function NBAStats() {
     </div>
   );
 }
-
 /* HIGHLIGHTS */
 function Highlights() {
   return (
