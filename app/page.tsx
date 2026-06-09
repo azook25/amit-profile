@@ -348,7 +348,7 @@ function NBAStats() {
 function Highlights() {
   return (
     <div className="space-y-12 max-w-4xl mx-auto">
-      <Video title="25/26 Season Highlights" id="NfuQ-S2K5Ek" />
+      <Video title="25/26 Season Highlights" id="R_6L7SLY1fY" />
       <Video title="24/25 Post-ACL Return" id="TGruuOCDHY0" />
       <Video title="ACL Rehab Clip" id="CsDl7rCqUGQ" />
       <Video title="23/24 Season Highlights" id="UIuipXL0tNc" />
