@@ -362,6 +362,10 @@ function FullGames() {
   return (
     <div className="space-y-12 max-w-4xl mx-auto">
       <Video
+        title="25/26 Israel National League (vs Hod Hasharon)| 24:55 MIN • 12 PTS • 7 REB • 6 AST"
+        id="oc10MY5ZvuQ"
+      />
+      <Video
         title="25/26 Israel National League (vs Kfar Saba)| 20:16 MIN • 11 PTS • 8 REB • 3 AST"
         id="QpBbFDnvlDg"
       />
