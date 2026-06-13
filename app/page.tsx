@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 const tabs = ["Bio", "Stats", "Highlights", "Full Games"];
@@ -22,7 +23,7 @@ export default function Home() {
             </h1>
 
             <div className="mt-4 text-gray-400 text-sm sm:text-base">
-              6'4" (1.93m) • 192 lbs • Age 20
+              6&apos;4&quot; (1.93m) • 192 lbs • Age 20
             </div>
 
             <div className="mt-10 flex justify-center lg:justify-start gap-8 sm:gap-16">
@@ -32,9 +33,12 @@ export default function Home() {
             </div>
           </div>
 
-          <img
+          <Image
             src="/amit-hero.jpg"
             alt="Amit Zuker"
+            width={420}
+            height={420}
+            priority
             className="w-60 sm:w-80 lg:w-[420px] object-contain drop-shadow-2xl"
           />
         </div>
@@ -93,7 +97,7 @@ function BioSection() {
         <h2 className="text-2xl sm:text-3xl font-bold mb-6">Biography</h2>
 
         <p className="text-gray-700 leading-relaxed">
-        Amit Zuker is a 6'4" (1.93m) Point Guard/Shooting Guard from Tel Aviv, Israel.
+        Amit Zuker is a 6&apos;4&quot; (1.93m) Point Guard/Shooting Guard from Tel Aviv, Israel.
         <br />
         <br />
         Currently playing for Ironi Kiryat Ono “Shiko” in the Israeli National League
@@ -118,7 +122,7 @@ function BioSection() {
           <li>22/23 U18 National Cup Holders</li>
           <li>22/23 U18 National Championship</li>
           <li>22/23 National High Schools Championship</li>
-          <li>2023 City Of Tel Aviv "Outstanding Youth Athlete"</li>
+          <li>2023 City Of Tel Aviv &quot;Outstanding Youth Athlete&quot;</li>
           <li>23/24 U18 National Championship</li>
           <li>23/24 National High Schools Championship</li>
         </ul>
@@ -133,9 +137,9 @@ function BioSection() {
           <p><strong>HS Major:</strong> Computer Science</p>
           <p><strong>SAT Score:</strong> 1350</p>
           
-          <p><strong>Team:</strong> Ironi Kiryat Ono "Shiko"</p>
+          <p><strong>Team:</strong> Ironi Kiryat Ono &quot;Shiko&quot;</p>
           <p><strong>Position:</strong> PG / SG</p>
-          <p><strong>Height:</strong> 6'4" (1.93m)</p>
+          <p><strong>Height:</strong> 6&apos;4&quot; (1.93m)</p>
           <p><strong>Weight:</strong> 192lbs / 87kg</p>
 
         </div>
