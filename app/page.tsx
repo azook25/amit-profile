@@ -136,6 +136,7 @@ function BioSection() {
           <p><strong>High School:</strong> Hadash Tel Aviv</p>
           <p><strong>HS Major:</strong> Computer Science</p>
           <p><strong>SAT Score:</strong> 1350</p>
+          <p><strong>GPA</strong> 3.84</p>
           
           <p><strong>Team:</strong> Ironi Kiryat Ono &quot;Shiko&quot;</p>
           <p><strong>Position:</strong> PG / SG</p>
