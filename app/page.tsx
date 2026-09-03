@@ -25,6 +25,9 @@ export default function Home() {
             <div className="mt-4 text-gray-400 text-sm sm:text-base">
               6&apos;4&quot; (1.93m) • 192 lbs • Age 20
             </div>
+            <div className="mt-4 text-white-600 text-sm sm:text-base">
+              6&apos;4&quot; 2025/26 Stats:
+            </div>
 
             <div className="mt-10 flex justify-center lg:justify-start gap-8 sm:gap-16">
               <Stat number="10.7" label="PPG" />
