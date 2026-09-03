@@ -25,9 +25,9 @@ export default function Home() {
             <div className="mt-4 text-gray-400 text-sm sm:text-base">
               6&apos;4&quot; (1.93m) • 192 lbs • Age 20
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
-              2025/26 Season Stats:
-            </h2>
+            <div className="mt-4 text-gray-400 text-sm sm:text-base">
+              2025/26 Stats:
+            </div>
 
             <div className="mt-10 flex justify-center lg:justify-start gap-8 sm:gap-16">
               <Stat number="10.7" label="PPG" />
