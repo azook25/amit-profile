@@ -30,9 +30,9 @@ export default function Home() {
             </div>
 
             <div className="mt-10 flex justify-center lg:justify-start gap-8 sm:gap-16">
-              <Stat number="14" label="PPG" />
-              <Stat number="8" label="RPG" />
-              <Stat number="4" label="APG" />
+              <Stat number="14.0" label="PPG" />
+              <Stat number="8.0" label="RPG" />
+              <Stat number="4.0" label="APG" />
             </div>
           </div>
 
