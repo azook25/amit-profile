@@ -155,6 +155,7 @@ function BioSection() {
 /* STATS */
 type SeasonKey = "2025-26" | "2026-27";
 type ViewMode = "Per Game" | "Totals";
+type CompetitionView = "Preseason" | "Regular Season";
 type GameLogEntry = {
   type: "Regular Season" | "Preseason";
   date: string;
@@ -228,6 +229,7 @@ type SeasonStats = {
 function NBAStats() {
   const [season, setSeason] = useState<SeasonKey>("2025-26");
   const [view, setView] = useState<ViewMode>("Per Game");
+  const [competitionView, setCompetitionView] = useState<CompetitionView>("Preseason");
 
   const seasons: Record<SeasonKey, SeasonStats> = {
     /* ============================================================
@@ -669,8 +671,63 @@ function NBAStats() {
     },
   };
 
-  const currentSeason = seasons[season];
   const viewOptions: ViewMode[] = ["Per Game", "Totals"];
+  const competitionOptions: CompetitionView[] = ["Preseason", "Regular Season"];
+
+  const regularSeasonPlaceholder: SeasonStats = {
+    label: "2026-27",
+    title: "2026-27 Regular Season",
+    competitionLabel: "Regular Season",
+    perGame: {
+      GP: 0,
+      MIN: "00:00",
+      PTS: 0,
+      REB: 0,
+      AST: 0,
+      STL: 0,
+      BLK: 0,
+      TO: 0,
+      PF: 0,
+      FGM_A: "0/0",
+      FG_PCT: 0,
+      FG3M_A: "0/0",
+      FG3_PCT: 0,
+      FG2M_A: "0/0",
+      FG2_PCT: 0,
+      FTM_A: "0/0",
+      FT_PCT: 0,
+      PM: "0",
+    },
+    totals: {
+      GP: 0,
+      MIN: "00:00",
+      PTS: 0,
+      REB: 0,
+      AST: 0,
+      STL: 0,
+      BLK: 0,
+      TO: 0,
+      PF: 0,
+      FGM_A: "0/0",
+      FG_PCT: 0,
+      FG3M_A: "0/0",
+      FG3_PCT: 0,
+      FG2M_A: "0/0",
+      FG2_PCT: 0,
+      FTM_A: "0/0",
+      FT_PCT: 0,
+      PM: "0",
+    },
+    gameLog: [],
+  };
+
+  const currentSeason =
+    season === "2026-27" && competitionView === "Regular Season"
+      ? regularSeasonPlaceholder
+      : seasons[season];
+
+  const currentCompetitionLabel =
+    season === "2026-27" ? competitionView : currentSeason.competitionLabel;
 
   const data =
     view === "Per Game"
@@ -695,12 +752,12 @@ function NBAStats() {
             <div className="mt-3 pl-4">
               <span
                 className={`inline-flex items-center rounded-full px-3 py-1 text-[10px] font-extrabold uppercase tracking-wider ${
-                  currentSeason.competitionLabel === "Preseason"
+                  currentCompetitionLabel === "Preseason"
                     ? "bg-amber-50 text-amber-700 border border-amber-200"
                     : "bg-blue-50 text-blue-700 border border-blue-100"
                 }`}
               >
-                {currentSeason.competitionLabel}
+                {currentCompetitionLabel}
               </span>
             </div>
           </div>
@@ -721,6 +778,24 @@ function NBAStats() {
               </button>
             ))}
           </div>
+
+          {season === "2026-27" && (
+            <div className="inline-flex w-fit rounded-lg bg-gray-100 p-1">
+              {competitionOptions.map((option) => (
+                <button
+                  key={option}
+                  onClick={() => setCompetitionView(option)}
+                  className={`rounded-md px-4 py-2 text-xs font-bold transition-all duration-200 ${
+                    competitionView === option
+                      ? "bg-white text-black shadow-sm"
+                      : "text-gray-400 hover:text-black"
+                  }`}
+                >
+                  {option}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* PER GAME / TOTALS */}
@@ -856,9 +931,9 @@ function NBAStats() {
         </div>
 
         {/* PRESEASON NOTE */}
-        {season === "2026-27" && (
+        {season === "2026-27" && competitionView === "Preseason" && (
           <p className="text-[11px] text-gray-400">
-            * 2026-27 statistics currently include preseason games only.
+            * 2026-27 preseason statistics currently include all available preseason games.
           </p>
         )}
       </div>
@@ -878,12 +953,12 @@ function NBAStats() {
 
             <span
               className={`rounded-full px-2.5 py-1 text-[9px] font-extrabold uppercase tracking-wider ${
-                currentSeason.competitionLabel === "Preseason"
+                currentCompetitionLabel === "Preseason"
                   ? "bg-amber-50 text-amber-700 border border-amber-200"
                   : "bg-blue-50 text-blue-700 border border-blue-100"
               }`}
             >
-              {currentSeason.competitionLabel}
+              {currentCompetitionLabel}
             </span>
 
           </div>
