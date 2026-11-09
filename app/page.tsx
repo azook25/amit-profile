@@ -35,7 +35,7 @@ export default function Home() {
               <Stat number="3.9" label="APG" />
             </div>
 
-            <div className="mt-8 w-full max-w-md">
+            <div className="mt-8 w-full max-w-[560px]">
               <HighlightPreviewCard />
             </div>
           </div>
@@ -107,11 +107,11 @@ function HighlightPreviewCard() {
       rel="noreferrer"
       className="group block overflow-hidden rounded-2xl border border-gray-700 bg-[#141414] transition hover:border-red-500 hover:-translate-y-0.5"
     >
-      <div className="relative">
+      <div className="relative aspect-[5/3] w-full overflow-hidden">
         <img
           src={thumbnailUrl}
           alt="Amit Zuker highlight reel preview"
-          className="h-44 w-full object-cover"
+          className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
         <div className="absolute bottom-3 left-3 flex items-center gap-2 rounded-full bg-red-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white shadow-lg">
