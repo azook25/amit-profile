@@ -26,13 +26,17 @@ export default function Home() {
               6&apos;4&quot; (1.93m) • 192 lbs • Age 20
             </div>
             <div className="mt-4 text-white-500 text-sm sm:text-base">
-              2026/27 Pre Season Stats:
+              2026/27 Stats:
             </div>
 
             <div className="mt-10 flex justify-center lg:justify-start gap-8 sm:gap-16">
-              <Stat number="14.0" label="PPG" />
-              <Stat number="8.0" label="RPG" />
-              <Stat number="4.0" label="APG" />
+              <Stat number="12.1" label="PPG" />
+              <Stat number="6.14" label="RPG" />
+              <Stat number="3.9" label="APG" />
+            </div>
+
+            <div className="mt-8 w-full max-w-md">
+              <HighlightPreviewCard />
             </div>
           </div>
 
@@ -89,6 +93,45 @@ function Stat({ number, label }: { number: string; label: string }) {
       <div className="text-3xl sm:text-5xl font-extrabold">{number}</div>
       <div className="text-xs text-gray-400 mt-1">{label}</div>
     </div>
+  );
+}
+
+function HighlightPreviewCard() {
+  const videoUrl = "https://www.youtube.com/watch?v=-i55QqgZAmI";
+  const thumbnailUrl = "https://img.youtube.com/vi/-i55QqgZAmI/hqdefault.jpg";
+
+  return (
+    <a
+      href={videoUrl}
+      target="_blank"
+      rel="noreferrer"
+      className="group block overflow-hidden rounded-2xl border border-gray-700 bg-[#141414] transition hover:border-red-500 hover:-translate-y-0.5"
+    >
+      <div className="relative">
+        <img
+          src={thumbnailUrl}
+          alt="Amit Zuker highlight reel preview"
+          className="h-44 w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+        <div className="absolute bottom-3 left-3 flex items-center gap-2 rounded-full bg-red-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white shadow-lg">
+          <span className="h-2.5 w-2.5 rounded-full bg-white" />
+          Watch
+        </div>
+      </div>
+
+      <div className="p-4">
+        <div className="text-[10px] uppercase tracking-[0.25em] text-gray-400">
+          Highlight Reel
+        </div>
+        <div className="mt-2 text-lg font-bold text-white">
+          2026/27 Season Highlights
+        </div>
+        <p className="mt-2 text-sm text-gray-300">
+          A quick look at the latest plays, big moments, and standout buckets from the season.
+        </p>
+      </div>
+    </a>
   );
 }
 
@@ -663,6 +706,72 @@ function NBAStats() {
           blk: 0,
           to: 1,
           pf: 3,
+          pm: "-",
+        },
+        {
+          type: "Regular Season",
+          date: "11/10/26",
+          opp: "@ Haifa",
+          min: "27:03",
+          pts: 14,
+          fg: "6/11",
+          fgp: "54.5",
+          fg3: "2/5",
+          fg3p: "40.0",
+          fg2: "4/6",
+          fg2p: "66.7",
+          ft: "0/0",
+          ftp: "0",
+          reb: 2,
+          ast: 2,
+          stl: 1,
+          blk: 0,
+          to: 4,
+          pf: 4,
+          pm: "-",
+        },
+        {
+          type: "Regular Season",
+          date: "18/10/26",
+          opp: "vs Zefat",
+          min: "16",
+          pts: 7,
+          fg: "2/5",
+          fgp: "40.0",
+          fg3: "0/2",
+          fg3p: "0",
+          fg2: "2/3",
+          fg2p: "66.7",
+          ft: "3/6",
+          ftp: "50.0",
+          reb: 3,
+          ast: 3,
+          stl: 3,
+          blk: 0,
+          to: 2,
+          pf: 2,
+          pm: "-",
+        },
+        {
+          type: "Regular Season",
+          date: "8/11/26",
+          opp: "vs Tveria",
+          min: "27:34",
+          pts: 8,
+          fg: "4/8",
+          fgp: "50.0",
+          fg3: "0/0",
+          fg3p: "0",
+          fg2: "4/8",
+          fg2p: "50.0",
+          ft: "0/0",
+          ftp: "0",
+          reb: 6,
+          ast: 6,
+          stl: 2,
+          blk: 1,
+          to: 1,
+          pf: 2,
           pm: "-",
         },
       ],
