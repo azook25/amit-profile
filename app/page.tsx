@@ -31,11 +31,11 @@ export default function Home() {
 
             <div className="mt-10 flex justify-center lg:justify-start gap-8 sm:gap-16">
               <Stat number="12.1" label="PPG" />
-              <Stat number="6.14" label="RPG" />
+              <Stat number="6.1" label="RPG" />
               <Stat number="3.9" label="APG" />
             </div>
 
-            <div className="mt-8 w-full max-w-[560px]">
+            <div className="mt-6 w-full max-w-[420px] lg:max-w-[500px]">
               <HighlightPreviewCard />
             </div>
           </div>
@@ -105,31 +105,28 @@ function HighlightPreviewCard() {
       href={videoUrl}
       target="_blank"
       rel="noreferrer"
-      className="group block overflow-hidden rounded-2xl border border-gray-700 bg-[#141414] transition hover:border-red-500 hover:-translate-y-0.5"
+      className="group block overflow-hidden rounded-xl border border-gray-700 bg-[#141414] transition hover:border-red-500 hover:-translate-y-0.5"
     >
-      <div className="relative aspect-[5/3] w-full overflow-hidden">
+      <div className="relative aspect-[16/7] w-full overflow-hidden">
         <img
           src={thumbnailUrl}
           alt="Amit Zuker highlight reel preview"
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-        <div className="absolute bottom-3 left-3 flex items-center gap-2 rounded-full bg-red-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white shadow-lg">
-          <span className="h-2.5 w-2.5 rounded-full bg-white" />
+        <div className="absolute bottom-2 left-2 flex items-center gap-2 rounded-full bg-red-600 px-2 py-1 text-[9px] font-bold uppercase tracking-wide text-white shadow-lg">
+          <span className="h-2 w-2 rounded-full bg-white" />
           Watch
         </div>
       </div>
 
-      <div className="p-4">
-        <div className="text-[10px] uppercase tracking-[0.25em] text-gray-400">
+      <div className="px-3 pb-3 pt-2">
+        <div className="text-[9px] uppercase tracking-[0.2em] text-gray-400">
           Highlight Reel
         </div>
-        <div className="mt-2 text-lg font-bold text-white">
+        <div className="mt-1 text-sm font-bold text-white">
           2026/27 Season Highlights
         </div>
-        <p className="mt-2 text-sm text-gray-300">
-          A quick look at the latest plays, big moments, and standout buckets from the season.
-        </p>
       </div>
     </a>
   );
