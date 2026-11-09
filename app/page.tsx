@@ -11,10 +11,16 @@ export default function Home() {
   return (
     <main className="bg-[#0f0f0f] text-white min-h-screen">
       {/* HERO */}
-      <section className="border-b border-gray-800">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-24 flex flex-col lg:flex-row justify-between items-center gap-16 lg:gap-20">
+      <section className="relative overflow-hidden border-b border-gray-800">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/amit-hero.jpg')" }}
+        />
+        <div className="absolute inset-0 bg-[#0f0f0f]/70" />
+
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-24 flex flex-col lg:flex-row justify-between items-center gap-16 lg:gap-20">
           <div className="text-center lg:text-left">
-            <div className="text-xs uppercase tracking-widest text-gray-400 mb-4">
+            <div className="text-xs uppercase tracking-widest text-gray-300 mb-4">
               Ironi Kiryat Ono • #25 • Guard
             </div>
 
@@ -22,10 +28,10 @@ export default function Home() {
               AMIT ZUKER
             </h1>
 
-            <div className="mt-4 text-gray-400 text-sm sm:text-base">
+            <div className="mt-4 text-gray-200 text-sm sm:text-base">
               6&apos;4&quot; (1.93m) • 192 lbs • Age 20
             </div>
-            <div className="mt-4 text-white-500 text-sm sm:text-base">
+            <div className="mt-4 text-white text-sm sm:text-base">
               2026/27 Stats:
             </div>
 
@@ -40,16 +46,6 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col items-center gap-8 lg:items-end">
-            <Image
-              src="/amit-hero.jpg"
-              alt="Amit Zuker"
-              width={420}
-              height={420}
-              priority
-              className="w-52 sm:w-72 lg:w-[360px] object-contain drop-shadow-2xl"
-            />
-          </div>
         </div>
       </section>
 
