@@ -12,7 +12,7 @@ export default function Home() {
     <main className="bg-[#0f0f0f] text-white min-h-screen">
       {/* HERO */}
       <section className="border-b border-gray-800">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-24 flex flex-col lg:flex-row justify-between items-center gap-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-24 flex flex-col lg:flex-row justify-between items-center gap-16 lg:gap-20">
           <div className="text-center lg:text-left">
             <div className="text-xs uppercase tracking-widest text-gray-400 mb-4">
               Ironi Kiryat Ono • #25 • Guard
@@ -35,9 +35,12 @@ export default function Home() {
               <Stat number="3.9" label="APG" />
             </div>
 
-            
+            <div className="mt-10 w-full max-w-[420px] lg:max-w-[500px]">
+              <HighlightPreviewCard />
+            </div>
+          </div>
 
-          <div className="flex flex-col items-center gap-4 lg:items-end">
+          <div className="flex flex-col items-center gap-8 lg:items-end">
             <Image
               src="/amit-hero.jpg"
               alt="Amit Zuker"
@@ -46,12 +49,6 @@ export default function Home() {
               priority
               className="w-52 sm:w-72 lg:w-[360px] object-contain drop-shadow-2xl"
             />
-          </div>
-
-
-          <div className="mt-6 w-full max-w-[420px] lg:max-w-[500px]">
-              <HighlightPreviewCard />
-            </div>
           </div>
         </div>
       </section>
