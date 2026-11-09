@@ -35,10 +35,7 @@ export default function Home() {
               <Stat number="3.9" label="APG" />
             </div>
 
-            <div className="mt-6 w-full max-w-[420px] lg:max-w-[500px]">
-              <HighlightPreviewCard />
-            </div>
-          </div>
+            
 
           <div className="flex flex-col items-center gap-4 lg:items-end">
             <Image
@@ -49,6 +46,12 @@ export default function Home() {
               priority
               className="w-52 sm:w-72 lg:w-[360px] object-contain drop-shadow-2xl"
             />
+          </div>
+
+
+          <div className="mt-6 w-full max-w-[420px] lg:max-w-[500px]">
+              <HighlightPreviewCard />
+            </div>
           </div>
         </div>
       </section>
@@ -109,7 +112,7 @@ function HighlightPreviewCard() {
       rel="noreferrer"
       className="group block overflow-hidden rounded-xl border border-gray-700 bg-[#141414] transition hover:border-red-500 hover:-translate-y-0.5"
     >
-      <div className="relative aspect-[18/7] w-full overflow-hidden sm:aspect-[20/7]">
+      <div className="relative aspect-[22/7] w-full overflow-hidden sm:aspect-[24/7]">
         <img
           src={thumbnailUrl}
           alt="Amit Zuker highlight reel preview"
