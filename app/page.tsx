@@ -40,14 +40,16 @@ export default function Home() {
             </div>
           </div>
 
-          <Image
-            src="/amit-hero.jpg"
-            alt="Amit Zuker"
-            width={420}
-            height={420}
-            priority
-            className="w-60 sm:w-80 lg:w-[420px] object-contain drop-shadow-2xl"
-          />
+          <div className="flex flex-col items-center gap-4 lg:items-end">
+            <Image
+              src="/amit-hero.jpg"
+              alt="Amit Zuker"
+              width={420}
+              height={420}
+              priority
+              className="w-52 sm:w-72 lg:w-[360px] object-contain drop-shadow-2xl"
+            />
+          </div>
         </div>
       </section>
 
@@ -107,7 +109,7 @@ function HighlightPreviewCard() {
       rel="noreferrer"
       className="group block overflow-hidden rounded-xl border border-gray-700 bg-[#141414] transition hover:border-red-500 hover:-translate-y-0.5"
     >
-      <div className="relative aspect-[16/7] w-full overflow-hidden">
+      <div className="relative aspect-[18/7] w-full overflow-hidden sm:aspect-[20/7]">
         <img
           src={thumbnailUrl}
           alt="Amit Zuker highlight reel preview"
