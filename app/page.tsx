@@ -122,9 +122,7 @@ function HighlightPreviewCard() {
         <div className="text-[9px] uppercase tracking-[0.2em] text-gray-400">
           Highlight Reel
         </div>
-        <div className="mt-1 text-sm font-bold text-white">
-          2026/27 Season Highlights
-        </div>
+        
       </div>
     </a>
   );
@@ -1028,7 +1026,14 @@ function NBAStats() {
                   </td>
 
                   <td className="p-3 text-left text-gray-500 font-medium">
-                    {game.opp}
+                    <div className="flex items-center gap-2">
+                      <span>{game.opp}</span>
+                      {game.opp.includes("Zefat") && (
+                        <span className="inline-flex items-center rounded-full bg-amber-100 px-1.5 py-0.5 text-[7px] font-bold uppercase tracking-wide text-amber-700">
+                          Ankle Sprain
+                        </span>
+                      )}
+                    </div>
                   </td>
 
                   <td className="p-3 font-medium">
