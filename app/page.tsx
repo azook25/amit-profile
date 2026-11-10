@@ -573,90 +573,68 @@ function NBAStats() {
       competitionLabel: "Preseason",
 
       perGame: {
-        GP: 4,
-        MIN: "30:30",
-        PTS: 14.0,
-        REB: 8.0,
-        AST: 4.0,
-        STL: 2.5,
+        GP: 7,
+        MIN: "27:31",
+        PTS: 12.1,
+        REB: 6.1,
+        AST: 3.9,
+        STL: 2.3,
         BLK: 0.3,
         TO: 2.3,
-        PF: 2.3,
-        FGM_A: "5.3/11.0",
-        FG_PCT: 47.7,
-        FG3M_A: "1.5/3.3",
-        FG3_PCT: 46.2,
-        FG2M_A: "3.8/7.8",
-        FG2_PCT: 48.4,
-        FTM_A: "1.0/3.0",
-        FT_PCT: 33.3,
+        PF: 2.4,
+        FGM_A: "4.7/9.7",
+        FG_PCT: 48.5,
+        FG3M_A: "1.1/2.9",
+        FG3_PCT: 40.0,
+        FG2M_A: "3.6/6.9",
+        FG2_PCT: 52.1,
+        FTM_A: "1.0/2.6",
+        FT_PCT: 38.9,
         PM: "-",
       },
 
       totals: {
-        GP: 4,
-        MIN: "121:58",
-        PTS: 56,
-        REB: 32,
-        AST: 16,
-        STL: 10,
-        BLK: 1,
-        TO: 9,
-        PF: 9,
-        FGM_A: "21/44",
-        FG_PCT: 47.7,
-        FG3M_A: "6/13",
-        FG3_PCT: 46.2,
-        FG2M_A: "15/31",
-        FG2_PCT: 48.4,
-        FTM_A: "4/12",
-        FT_PCT: 33.3,
+        GP: 7,
+        MIN: "192:35",
+        PTS: 85,
+        REB: 43,
+        AST: 27,
+        STL: 16,
+        BLK: 2,
+        TO: 16,
+        PF: 17,
+        FGM_A: "33/68",
+        FG_PCT: 48.5,
+        FG3M_A: "8/20",
+        FG3_PCT: 40.0,
+        FG2M_A: "25/48",
+        FG2_PCT: 52.1,
+        FTM_A: "7/18",
+        FT_PCT: 38.9,
         PM: "-",
       },
 
       gameLog: [
         {
           type: "Preseason",
-          date: "01/10/26",
-          opp: "vs Ramla",
-          min: "28:07",
-          pts: 12,
-          fg: "6/13",
-          fgp: "46.0",
-          fg3: "0/2",
-          fg3p: "0.0",
-          fg2: "6/11",
-          fg2p: "55.0",
-          ft: "0/2",
-          ftp: "0.0",
-          reb: 10,
-          ast: 3,
-          stl: 2,
-          blk: 0,
-          to: 2,
-          pf: 2,
-          pm: "-",
-        },
-        {
-          type: "Preseason",
-          date: "28/09/26",
-          opp: "@ Beer Yaacov",
-          min: "32:52",
-          pts: 17,
-          fg: "6/13",
-          fgp: "46.0",
-          fg3: "1/3",
-          fg3p: "33.0",
-          fg2: "5/10",
+          date: "19/09/26",
+          opp: "@ Shoham",
+          min: "34:19",
+          pts: 16,
+          fg: "5/8",
+          fgp: "62.5",
+          fg3: "3/4",
+          fg3p: "75.0",
+          fg2: "2/4",
           fg2p: "50.0",
-          ft: "2/4",
-          ftp: "50.0",
+          ft: "1/4",
+          ftp: "25.0",
           reb: 7,
-          ast: 3,
-          stl: 2,
+          ast: 4,
+          stl: 4,
           blk: 0,
-          to: 3,
-          pf: 1,
+          to: 1,
+          pf: 3,
           pm: "-",
         },
         {
@@ -683,24 +661,46 @@ function NBAStats() {
         },
         {
           type: "Preseason",
-          date: "19/09/26",
-          opp: "@ Shoham",
-          min: "34:19",
-          pts: 16,
-          fg: "5/8",
-          fgp: "62.5",
-          fg3: "3/4",
-          fg3p: "75.0",
-          fg2: "2/4",
+          date: "28/09/26",
+          opp: "@ Beer Yaacov",
+          min: "32:52",
+          pts: 17,
+          fg: "6/13",
+          fgp: "46.0",
+          fg3: "1/3",
+          fg3p: "33.0",
+          fg2: "5/10",
           fg2p: "50.0",
-          ft: "1/4",
-          ftp: "25.0",
+          ft: "2/4",
+          ftp: "50.0",
           reb: 7,
-          ast: 4,
-          stl: 4,
+          ast: 3,
+          stl: 2,
           blk: 0,
-          to: 1,
-          pf: 3,
+          to: 3,
+          pf: 1,
+          pm: "-",
+        },
+        {
+          type: "Preseason",
+          date: "01/10/26",
+          opp: "vs Ramla",
+          min: "28:07",
+          pts: 12,
+          fg: "6/13",
+          fgp: "46.0",
+          fg3: "0/2",
+          fg3p: "0.0",
+          fg2: "6/11",
+          fg2p: "55.0",
+          ft: "0/2",
+          ftp: "0.0",
+          reb: 10,
+          ast: 3,
+          stl: 2,
+          blk: 0,
+          to: 2,
+          pf: 2,
           pm: "-",
         },
         {
@@ -795,19 +795,6 @@ function NBAStats() {
             <h2 className="text-2xl font-extrabold uppercase border-l-4 border-blue-600 pl-3">
               {currentSeason.title}
             </h2>
-
-            {/* PRESEASON / REGULAR SEASON LABEL */}
-            <div className="mt-3 pl-4">
-              <span
-                className={`inline-flex items-center rounded-full px-3 py-1 text-[10px] font-extrabold uppercase tracking-wider ${
-                  currentSeason.competitionLabel === "Preseason"
-                    ? "bg-amber-50 text-amber-700 border border-amber-200"
-                    : "bg-blue-50 text-blue-700 border border-blue-100"
-                }`}
-              >
-                {currentSeason.competitionLabel}
-              </span>
-            </div>
           </div>
 
           {/* SEASON SELECTOR */}
@@ -976,21 +963,9 @@ function NBAStats() {
         <div className="flex flex-wrap items-center justify-between gap-3">
 
           <div className="flex items-center gap-3">
-
             <h3 className="text-xl font-bold uppercase">
               Game Log
             </h3>
-
-            <span
-              className={`rounded-full px-2.5 py-1 text-[9px] font-extrabold uppercase tracking-wider ${
-                currentSeason.competitionLabel === "Preseason"
-                  ? "bg-amber-50 text-amber-700 border border-amber-200"
-                  : "bg-blue-50 text-blue-700 border border-blue-100"
-              }`}
-            >
-              {currentSeason.competitionLabel}
-            </span>
-
           </div>
 
           <span className="text-xs font-semibold text-gray-400">
@@ -1011,10 +986,6 @@ function NBAStats() {
 
                 <th className="p-3 text-left border-r border-gray-700">
                   Opponent
-                </th>
-
-                <th className="p-3">
-                  Type
                 </th>
 
                 <th className="p-3">MIN</th>
@@ -1058,21 +1029,6 @@ function NBAStats() {
 
                   <td className="p-3 text-left text-gray-500 font-medium">
                     {game.opp}
-                  </td>
-
-                  {/* GAME TYPE */}
-                  <td className="p-3">
-
-                    <span
-                      className={`rounded-full px-2 py-1 text-[8px] font-bold uppercase tracking-wide ${
-                        game.type === "Preseason"
-                          ? "bg-amber-50 text-amber-700"
-                          : "bg-gray-100 text-gray-500"
-                      }`}
-                    >
-                      {game.type}
-                    </span>
-
                   </td>
 
                   <td className="p-3 font-medium">
