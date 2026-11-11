@@ -38,7 +38,7 @@ export default function Home() {
             <div className="mt-10 flex justify-center lg:justify-start gap-8 sm:gap-16">
               <Stat number="12.1" label="PPG" />
               <Stat number="6.1" label="RPG" />
-              <Stat number="3.9" label="APG" />
+              <Stat number="4.1" label="APG" />
             </div>
 
             <div className="mt-10 w-full max-w-[420px] lg:max-w-[500px]">
@@ -575,7 +575,7 @@ function NBAStats() {
         MIN: "27:31",
         PTS: 12.1,
         REB: 6.1,
-        AST: 3.9,
+        AST: 4.1,
         STL: 2.3,
         BLK: 0.3,
         TO: 2.3,
@@ -596,7 +596,7 @@ function NBAStats() {
         MIN: "192:35",
         PTS: 85,
         REB: 43,
-        AST: 27,
+        AST: 29,
         STL: 16,
         BLK: 2,
         TO: 16,
@@ -749,7 +749,7 @@ function NBAStats() {
           type: "Regular Season",
           date: "8/11/26",
           opp: "vs Tveria",
-          min: "27:34",
+          min: "24:55",
           pts: 8,
           fg: "4/8",
           fgp: "50.0",
@@ -760,7 +760,7 @@ function NBAStats() {
           ft: "0/0",
           ftp: "0",
           reb: 6,
-          ast: 6,
+          ast: 8,
           stl: 2,
           blk: 1,
           to: 1,
